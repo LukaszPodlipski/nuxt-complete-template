@@ -1,0 +1,27 @@
+{
+  "type": "dir",
+  "subNodes": {
+    "nuxt.config.ts": {
+      "type": "ts",
+      "annotation": ""
+    },
+    "app": {
+      "type": "dir",
+      "subNodes": {
+        "assets": {
+          "type": "dir",
+          "subNodes": {
+            "icons": {
+              "type": "dir",
+              "annotation": "SVG icons should have stroke/fill set to currentColor to work with the icon component."
+            }
+          }
+        }
+      }
+    },
+    "public": {
+      "type": "dir",
+      "annotation": "Store here:\n- images"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+@use './_normalize.scss';
+@use './_components.scss';
+@use './_atoms.scss';
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+html,
+body {
+  min-height: 100vh;
+  background-color: var(--color-background);
+}

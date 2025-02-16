@@ -1,0 +1,12 @@
+.app-separator {
+  height: 1px;
+  min-height: 1px;
+  width: 100%;
+  background-color: var(--color-background-secondary);
+  margin: 20px 0;
+
+  &--flat {
+    @extend .app-separator;
+    margin: 0;
+  }
+}

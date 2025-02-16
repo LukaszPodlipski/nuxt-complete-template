@@ -1,0 +1,13 @@
+{
+	"recommendations": [
+		/* Required */
+		"Vue.volar", // Vue - Official
+		"dbaeumer.vscode-eslint", // Eslint
+		"esbenp.prettier-vscode", // Prettier - Code formatter
+		"bradlc.vscode-tailwindcss", // Tailwind CSS IntelliSense
+		/* Optional */
+		"AlexTsirozidis.codebasenotes", // Codebase Notes
+		"antfu.iconify", // Iconify IntelliSense
+		"lokalise.i18n-ally" // i18n Ally
+	]
+}

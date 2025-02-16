@@ -1,0 +1,17 @@
+.p-inputtext {
+  color: var(--color-white);
+  background-color: rgb(28, 28, 30);
+  box-shadow:
+    0 0 0.4vw var(--color-primary),
+    0 0 0 0.15vw transparent;
+  border-radius: 0.4vw;
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  transition: 0.4s;
+  height: 40px;
+
+  &:focus {
+    box-shadow: 0 0 0 0.15vw rgba(135, 207, 235, 0.186);
+  }
+}

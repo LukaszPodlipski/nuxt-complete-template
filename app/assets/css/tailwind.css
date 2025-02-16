@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+	--color-*: initial;
+	--color-white: #fff;
+	--color-primary: #0068fd;
+	--color-secondary: #41b883;
+	--color-background: #19191c;
+	--color-background-secondary: #212124;
+	--color-warning:rgb(255, 30, 0);
+}
+
+/* Set application colors with pattern --color-<name> */
