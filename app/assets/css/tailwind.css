@@ -1,13 +1,15 @@
-@import "tailwindcss";
+/* Import TailwindCSS as important to override the default styles */
+@import 'tailwindcss' important;
 
 @theme {
-	--color-*: initial;
-	--color-white: #fff;
-	--color-primary: #0068fd;
-	--color-secondary: #41b883;
-	--color-background: #19191c;
-	--color-background-secondary: #212124;
-	--color-warning:rgb(255, 30, 0);
+  /* Clear default colors */
+  --color-*: initial;
+  /* Set application colors with pattern --color-<name> */
+  --color-white: #fff;
+  --color-default: var(--color-white);
+  --color-primary: #0068fd;
+  --color-secondary: #41b883;
+  --color-background: #19191c;
+  --color-background-secondary: #212124;
+  --color-warning: rgb(255, 30, 0);
 }
-
-/* Set application colors with pattern --color-<name> */

@@ -1,8 +1,13 @@
 @use './_normalize.scss';
 @use './_components.scss';
 @use './_atoms.scss';
+
 * {
   font-family: 'Inter', sans-serif;
+  // Set default text color for all elements except SVG elements and their children
+  &:not(svg):not(svg *) {
+    color: var(--color-default);
+  }
 }
 
 html,
