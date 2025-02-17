@@ -17,7 +17,28 @@ export default defineNuxtConfig({
 
   devtools: { enabled: true },
 
-  css: ['~/assets/css/tailwind.css', '~/assets/scss/main.scss'],
+  app: {
+    head: {
+      link: [
+        {
+          rel: 'preconnect',
+          href: 'https://fonts.googleapis.com',
+        },
+        {
+          rel: 'preconnect',
+          href: 'https://fonts.gstatic.com',
+          crossorigin: '',
+        },
+        {
+          rel: 'preload',
+          as: 'font',
+          href: 'https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap',
+        },
+      ],
+    },
+  },
+
+  css: ['~/assets/scss/main.scss', '~/assets/css/tailwind.css'],
 
   future: {
     compatibilityVersion: 4,
