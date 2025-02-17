@@ -1,9 +1,7 @@
 .p-inputtext {
   color: var(--color-white);
   background-color: rgb(28, 28, 30);
-  box-shadow:
-    0 0 0.4vw var(--color-primary),
-    0 0 0 0.15vw transparent;
+  box-shadow: 0 0 0 0.15vw var(--color-background-secondary);
   border-radius: 0.4vw;
   border: none;
   outline: none;
@@ -11,7 +9,15 @@
   transition: 0.4s;
   height: 40px;
 
-  &:focus {
-    box-shadow: 0 0 0 0.15vw rgba(135, 207, 235, 0.186);
+  &.p-invalid {
+    box-shadow:
+      0 0 0.4vw var(--color-warning),
+      0 0 0 0.15vw transparent;
+  }
+
+  &:not(.p-invalid):focus {
+    box-shadow:
+      0 0 0.4vw var(--color-secondary),
+      0 0 0 0.15vw transparent;
   }
 }
