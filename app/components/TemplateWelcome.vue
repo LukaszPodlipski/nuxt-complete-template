@@ -9,14 +9,13 @@
 </script>
 
 <template>
-  <div class="flex min-h-screen w-full items-center justify-center p-10">
+  <div class="flex w-full items-center justify-center p-10">
     <div class="flex flex-col items-start p-4">
-      <h1 class="text-secondary text-2xl font-bold">Nuxt Template</h1>
       <div class="flex flex-col gap-2">
         <div class="flex flex-col gap-3">
           <h2 class="text-2xl font-bold">Nuxt Icons</h2>
-          <div class="flex items-center gap-2">
-            <Icon name="local:vue" class="text-secondary text-2xl" />
+          <div class="flex items-center gap-4">
+            <Icon name="local:vue" class="text-primary text-2xl" />
             <span class="">Local icon - Vue Icon module</span>
           </div>
         </div>
@@ -53,6 +52,11 @@
             alt="Nuxt Image"
             width="300"
           />
+        </div>
+        <div class="app-separator" />
+        <div class="flex flex-col gap-3">
+          <h2 class="text-2xl font-bold">Nuxt Fonts</h2>
+          <span class="text-secondary">Default font: Inter</span>
         </div>
         <div class="app-separator" />
         <div class="flex flex-col gap-3">
