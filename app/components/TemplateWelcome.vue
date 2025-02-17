@@ -30,7 +30,7 @@
         <div class="app-separator" />
         <div class="flex flex-col gap-3">
           <h2 class="text-2xl font-bold">VeeValidate</h2>
-          <InputText v-model="value" type="text" />
+          <InputText v-model="value" type="text" :invalid="!!errorMessage" />
           <small
             class="h-[15px]"
             :class="errorMessage ? 'text-warning' : 'text-secondary'"
@@ -57,6 +57,16 @@
         <div class="flex flex-col gap-3">
           <h2 class="text-2xl font-bold">Nuxt Fonts</h2>
           <span class="text-secondary">Default font: Inter</span>
+        </div>
+        <div class="app-separator" />
+        <div class="flex flex-col gap-3">
+          <h2 class="text-2xl font-bold">Pinia</h2>
+          <NuxtImg
+            class="self-center"
+            src="https://pinia.vuejs.org/logo.svg"
+            alt="Pinia Logo"
+            width="50"
+          />
         </div>
         <div class="app-separator" />
         <div class="flex flex-col gap-3">

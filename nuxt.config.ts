@@ -13,6 +13,7 @@ export default defineNuxtConfig({
     'nuxt-viewport',
     '@nuxtjs/i18n',
     '@nuxt/image',
+    '@pinia/nuxt',
   ],
 
   devtools: { enabled: true },
@@ -109,6 +110,10 @@ export default defineNuxtConfig({
     options: {
       theme: 'none',
     },
+  },
+
+  pinia: {
+    storesDirs: ['./app/stores/**'],
   },
 
   viewport: {
