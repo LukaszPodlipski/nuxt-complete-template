@@ -1,5 +1,20 @@
 <script setup lang="ts">
   import InputText from 'primevue/inputtext';
+  import { useExampleStore } from '~/stores/example';
+
+  const exampleStore = useExampleStore();
+
+  /* Fetch data on the server, and store it in the store */
+  const { data } = storeToRefs(exampleStore) as {
+    data: Ref<Array<{ title: string }>>;
+  };
+
+  await useAsyncData('example', () => exampleStore.getExamplePosts()); // To fetch data on the client side add { server: false } or call getExamplePosts on mount
+
+  const formattedData = computed(() => {
+    if (!data.value) return null;
+    return data.value[0];
+  });
 
   const { value, errorMessage } = useField<string>(
     'Input',
@@ -9,7 +24,7 @@
 </script>
 
 <template>
-  <div class="flex w-full items-center justify-center p-10">
+  <div class="max-w flex w-full items-center justify-center p-10">
     <div class="flex flex-col items-start p-4">
       <div class="flex flex-col gap-2">
         <div class="flex flex-col gap-3">
@@ -67,6 +82,13 @@
             alt="Pinia Logo"
             width="50"
           />
+        </div>
+        <div class="app-separator" />
+        <div class="flex flex-col gap-3">
+          <h2 class="text-2xl font-bold">SSR External API fetch</h2>
+          <div v-if="formattedData" class="max-w-[300px]">
+            {{ formattedData }}
+          </div>
         </div>
         <div class="app-separator" />
         <div class="flex flex-col gap-3">

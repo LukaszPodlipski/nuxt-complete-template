@@ -5,10 +5,10 @@
     >
       <Icon name="local:vue" class="text-secondary text-3xl" />
       <span class="text-secondary text-2xl font-bold">
-        Nuxt Complete Template
+        Nuxt Complete Template - v4 compatible
       </span>
     </div>
-    <div class="pt-16">
+    <div class="pt-24">
       <slot />
     </div>
   </div>

@@ -16,7 +16,9 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
   ],
 
-  devtools: { enabled: true },
+  devtools: {
+    enabled: true,
+  },
 
   app: {
     head: {
@@ -60,7 +62,9 @@ export default defineNuxtConfig({
   },
 
   runtimeConfig: {
-    appSecret: process.env.APP_SECRET_EXAMPLE, // Change this to your own secret
+    public: {
+      apiBaseUrl: process.env.API_BASE_URL,
+    },
   },
 
   typescript: {
