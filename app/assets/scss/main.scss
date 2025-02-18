@@ -2,12 +2,14 @@
 @use './_components.scss';
 @use './_atoms.scss';
 @use './_typography.scss';
+@import 'primeicons/primeicons.css';
 
 * {
   font-family: 'Inter', sans-serif;
   // Set default text color for all elements except SVG elements and their children
-  &:not(svg):not(svg *) {
-    color: var(--color-default);
+
+  &:not(.p-button) > &:not(svg):not(svg *):not(.p-component) {
+    color: var(--color-text-default);
   }
 }
 
@@ -20,5 +22,5 @@ html {
 html,
 body {
   min-height: 100vh;
-  background-color: var(--color-background);
+  background-color: var(--color-neutral-white);
 }

@@ -1,5 +1,4 @@
 <script setup lang="ts">
-  import InputText from 'primevue/inputtext';
   import { useExampleStore } from '~/stores/example';
 
   const exampleStore = useExampleStore();
@@ -9,17 +8,35 @@
     data: Ref<Array<{ title: string }>>;
   };
 
-  await useAsyncData('example', () => exampleStore.getExamplePosts()); // To fetch data on the client side add { server: false } or call getExamplePosts on mount
+  await useAsyncData('example', () => exampleStore.getExamplePosts()).then(
+    () => true
+  ); // To fetch data on the client side add { server: false } or call getExamplePosts on mount
 
   const formattedData = computed(() => {
     if (!data.value) return null;
     return data.value[0];
   });
 
-  const { value, errorMessage } = useField<string>(
+  const { value: inputValue, errorMessage } = useField<string>(
     'Input',
     (inputValue) => !!inputValue
   );
+
+  const { value: singleSelectValue, errorMessage: singleSelectErrorMessage } =
+    useField<string>(
+      'Single Select',
+      (singleSelectValue) => !!singleSelectValue
+    );
+
+  const { value: textAreaValue, errorMessage: textAreaErrorMessage } =
+    useField<string>('Text Area', (textAreaValue) => !!textAreaValue);
+
+  const options = [
+    { label: 'New York', value: 'NY' },
+    { label: 'Los Angeles', value: 'LA' },
+    { label: 'Chicago', value: 'CHI' },
+  ];
+
   const { t } = useI18n();
 </script>
 
@@ -37,21 +54,45 @@
         <div class="app-separator" />
         <div class="flex flex-col gap-3">
           <h2 class="text-h2-md">PrimeVue Unstyled Hybrid Mode</h2>
-          <Button
-            class="bg-primary text-body-l cursor-pointer rounded-sm px-2 py-3"
-            label="+ TailwindCSS"
-          />
+          <BaseButton icon="vue" label="Button" />
         </div>
         <div class="app-separator" />
         <div class="flex flex-col gap-3">
           <h2 class="text-h2-md">VeeValidate</h2>
-          <InputText v-model="value" type="text" :invalid="!!errorMessage" />
-          <small
-            class="text-body-s"
-            :class="errorMessage ? 'text-warning' : 'text-secondary'"
-          >
-            {{ errorMessage || 'Input valid' }}
-          </small>
+          <div class="flex flex-col gap-6">
+            <BaseField
+              v-model="inputValue"
+              field-type="text"
+              hint="This is a hint"
+              placeholder="Placeholder text..."
+              :errors="errorMessage"
+              :invalid="!!errorMessage"
+              label="Input text"
+              :icons="{
+                left: 'vue',
+              }"
+            />
+            <BaseField
+              v-model="singleSelectValue"
+              field-type="singleSelect"
+              hint="This is a hint"
+              placeholder="Placeholder text..."
+              :errors="singleSelectErrorMessage"
+              label="Single Select"
+              :options="options"
+              :icons="{
+                left: 'vue',
+              }"
+            />
+            <BaseField
+              v-model="textAreaValue"
+              field-type="textArea"
+              hint="This is a hint"
+              placeholder="Placeholder text..."
+              :errors="textAreaErrorMessage"
+              label="Text Area"
+            />
+          </div>
         </div>
         <div class="app-separator" />
         <div class="flex flex-col gap-3">

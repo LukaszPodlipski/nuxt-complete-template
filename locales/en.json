@@ -1,3 +1,6 @@
 {
-    "example": "This is an example of a translation using i18n "
+  "example": "This is an example of a translation using i18n ",
+  "common": {
+    "loading": "Loading"
+  }
 }

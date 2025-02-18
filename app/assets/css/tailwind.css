@@ -5,11 +5,45 @@
   /* Clear default colors */
   --color-*: initial;
   /* Set application colors with pattern --color-<name> */
-  --color-white: #fff;
-  --color-default: var(--color-white);
-  --color-primary: #0068fd;
-  --color-secondary: #41b883;
-  --color-background: #19191c;
-  --color-background-secondary: #212124;
-  --color-warning: rgb(255, 30, 0);
+
+  /* semantic */
+  --color-text-default: var(--color-neutral-700);
+  --color-white: var(--color-neutral-white);
+  --color-black: var(--color-neutral-off-black);
+  --color-primary: var(--color-blue-500);
+  --color-secondary: var(--color-blue-600);
+  --color-warning: #df1c41;
+
+  /* neutral*/
+  --color-neutral-white: #ffffff;
+  --color-neutral-50: #fafafa;
+  --color-neutral-100: #f0f0f2;
+  --color-neutral-200: #e0e0e6;
+  --color-neutral-300: #d1d1d9;
+  --color-neutral-400: #c1c1cd;
+  --color-neutral-500: #9f9fb1;
+  --color-neutral-600: #7e7e96;
+  --color-neutral-700: #626278;
+  --color-neutral-800: #494959;
+  --color-neutral-900: #31313c;
+  --color-neutral-off-black: #1b1b21;
+
+  /* blue*/
+  --color-blue-50: #eef0fa;
+  --color-blue-100: #dde1f6;
+  --color-blue-200: #bac3ec;
+  --color-blue-300: #98a5e3;
+  --color-blue-400: #7587d9;
+  --color-blue-500: #5369d0;
+  --color-blue-600: #4254a6;
+  --color-blue-700: #323f7d;
+  --color-blue-800: #212a53;
+  --color-blue-900: #11152a;
+
+  /* unnamed */
+  --color-unnamed-1: #e2e4e9;
+  --color-unnamed-2: #525866;
+  --color-unnamed-3: #f6f8fa;
+  --color-unnamed-4: #cdd0d5;
+  --color-unnamed-5: #868c98;
 }

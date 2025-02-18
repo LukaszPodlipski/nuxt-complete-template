@@ -1,0 +1,72 @@
+@use '../_typography';
+
+.p-button {
+  /* Alignment */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: min-content;
+  flex-wrap: nowrap;
+  gap: 8px;
+  transition: background-color 0.2s ease-in-out;
+
+  /* Cursor */
+  cursor: pointer;
+
+  /* Typography */
+  @extend .text-body-m;
+
+  /* Styling */
+  padding: 10px 10px;
+  border-radius: 8px;
+
+  &.primary {
+    background-color: var(--color-blue-500);
+    color: var(--color-neutral-white);
+
+    &:not(:active):not(:disabled):not(.loading):hover {
+      background-color: var(--color-blue-400);
+    }
+
+    &:not(:disabled):not(.loading):active {
+      outline: 1px solid var(--color-blue-100);
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      background-color: var(--color-blue-100);
+      color: var(--color-neutral-white);
+    }
+
+    &.loading {
+      cursor: progress;
+      color: var(--color-blue-300) !important;
+    }
+  }
+
+  &.outlined {
+    background-color: transparent;
+    color: var(--color-neutral-700);
+    outline: 1px solid var(--color-blue-100);
+
+    &:not(:active):not(:disabled):not(.loading):hover {
+      outline-color: var(--color-blue-500);
+    }
+
+    &:not(:disabled):not(.loading):active {
+      color: var(--color-neutral-off-black);
+      outline-color: var(--color-blue-500);
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      color: var(--color-neutral-300);
+      outline-color: var(--color-blue-100);
+    }
+
+    &.loading {
+      cursor: progress;
+      color: var(--color-neutral-700) !important;
+    }
+  }
+}
