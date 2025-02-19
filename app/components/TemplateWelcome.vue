@@ -54,7 +54,39 @@
         <div class="app-separator" />
         <div class="flex flex-col gap-3">
           <h2 class="text-h2-md">PrimeVue Unstyled Hybrid Mode</h2>
-          <BaseButton icon="vue" label="Button" />
+          <BaseButton
+            :icons="{
+              left: {
+                name: 'vue',
+                size: 16,
+              },
+            }"
+            label="Primary Button"
+          />
+          <BaseButton
+            :icons="{
+              left: {
+                name: 'info',
+                size: 16,
+              },
+            }"
+            label="Outlined Button"
+            type="outlined"
+          />
+          <BaseButton
+            :icons="{
+              left: {
+                name: 'vue',
+                size: 14,
+              },
+              right: {
+                name: 'arrow-right-line',
+                size: 20,
+              },
+            }"
+            label="Text Button"
+            type="text"
+          />
         </div>
         <div class="app-separator" />
         <div class="flex flex-col gap-3">

@@ -4,18 +4,70 @@
 @theme {
   /* Clear default colors */
   --color-*: initial;
+
   /* Set application colors with pattern --color-<name> */
 
-  /* semantic */
-  --color-text-default: var(--color-neutral-700);
-  --color-white: var(--color-neutral-white);
-  --color-black: var(--color-neutral-off-black);
-  --color-primary: var(--color-blue-500);
-  --color-secondary: var(--color-blue-600);
-  --color-warning: #df1c41;
+  /* --------------------- PROJECT TOKENS ------------------------- */
+  --color-bg-brand-hover: var(--color-blue-400);
+  --color-bg-brand-soft: var(--color-blue-100);
+  --color-bg-brand-strong: var(--color-blue-500);
+  --color-bg-brand-verysoft: var(--color-blue-50);
+  --color-bg-error: var(--color-red-soft);
+  --color-bg-info: var(--color-blue-soft);
+  --color-bg-neutral-soft: var(--color-neutral-50);
+  --color-bg-neutral-strong: var(--color-neutral-300);
+  --color-bg-orange-hover: var(--color-orange-400);
+  --color-bg-orange-soft: var(--color-orange-100);
+  --color-bg-orange-strong: var(--color-orange-500);
+  --color-bg-success: var(--color-green-soft);
+  --color-bg-white: var(--color-neutral-0);
 
-  /* neutral*/
+  --color-icon-brand: var(--color-blue-500);
+  --color-icon-disabled: var(--color-neutral-200);
+  --color-icon-error: var(--color-red-strong);
+  --color-icon-info: var(--color-blue-strong);
+  --color-icon-orange: var(--color-orange-500);
+  --color-icon-soft: var(--color-neutral-500);
+  --color-icon-strong: var(--color-neutral-off-black);
+  --color-icon-success: var(--color-green-strong);
+  --color-icon-warning: var(--color-yellow-strong);
+  --color-icon-white: var(--color-neutral-0);
+
+  --color-stroke-brand-soft: var(--color-blue-100);
+  --color-stroke-brand-strong: var(--color-blue-500);
+  --color-stroke-disabled: var(--color-neutral-100);
+  --color-stroke-error-soft: var(--color-red-soft);
+  --color-stroke-error-strong: var(--color-red-strong);
+  --color-stroke-info-soft: var(--color-blue-soft);
+  --color-stroke-info-strong: var(--color-blue-strong);
+  --color-stroke-orange-soft: var(--color-orange-100);
+  --color-stroke-orange-strong: var(--color-orange-500);
+  --color-stroke-primary: var(--color-neutral-500);
+  --color-stroke-secondary: var(--color-neutral-300);
+  --color-stroke-success-soft: var(--color-green-soft);
+  --color-stroke-success-strong: var(--color-green-strong);
+  --color-stroke-white: var(--color-neutral-0);
+
+  --color-font-brand: var(--color-blue-500);
+  --color-font-brand-hover: var(--color-blue-400);
+  --color-font-brand-soft: var(--color-blue-300);
+  --color-font-disabled: var(--color-neutral-300);
+  --color-font-error: var(--color-red-strong);
+  --color-font-orange-soft: var(--color-orange-200);
+  --color-font-primary: var(--color-neutral-off-black);
+  --color-font-secondary: var(--color-neutral-700);
+  --color-font-soft: var(--color-neutral-500);
+  --color-font-success: var(--color-green-strong);
+  --color-font-white: var(--color-neutral-0);
+
+  /* --------------------- MY TOKENS ------------------------- */
+  --color-black: var(--color-neutral-off-black);
+
+  /* --------------------- COLORS ------------------------- */
+
+  /* neutral */
   --color-neutral-white: #ffffff;
+  --color-neutral-0: #ffffff;
   --color-neutral-50: #fafafa;
   --color-neutral-100: #f0f0f2;
   --color-neutral-200: #e0e0e6;
@@ -28,7 +80,7 @@
   --color-neutral-900: #31313c;
   --color-neutral-off-black: #1b1b21;
 
-  /* blue*/
+  /* blue */
   --color-blue-50: #eef0fa;
   --color-blue-100: #dde1f6;
   --color-blue-200: #bac3ec;
@@ -39,6 +91,33 @@
   --color-blue-700: #323f7d;
   --color-blue-800: #212a53;
   --color-blue-900: #11152a;
+
+  --color-blue-strong: #3792fb;
+  --color-blue-soft: #dce8ff;
+
+  /* orange */
+  --color-orange-50: #ffefdb;
+  --color-orange-100: #ffe0d1;
+  --color-orange-200: #ffcaa2;
+  --color-orange-300: #ffa174;
+  --color-orange-400: #ff8145;
+  --color-orange-500: #ff6217;
+  --color-orange-600: #cc4e12;
+  --color-orange-700: #99360e;
+  --color-orange-800: #662709;
+  --color-orange-900: #331405;
+
+  /* red */
+  --color-red-strong: #df1c41;
+  --color-red-soft: #ffe0e6;
+
+  /* yellow */
+  --color-yellow-strong: #ffd000;
+  --color-yellow-soft: #ffffbf;
+
+  /* green */
+  --color-green-strong: #1fc18b;
+  --color-green-soft: #dbffec;
 
   /* unnamed */
   --color-unnamed-1: #e2e4e9;

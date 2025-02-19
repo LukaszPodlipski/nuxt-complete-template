@@ -79,7 +79,7 @@
 
   const hintColorClass = computed(() => {
     if (props.disabled) return 'text-neutral-300';
-    if (props.errors) return 'text-warning';
+    if (props.errors) return 'text-red-strong';
     return 'text-neutral-700';
   });
 

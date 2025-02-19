@@ -6,13 +6,13 @@
 
   /* Appearance */
   color: var(--color-unnamed-5);
-  background-color: var(--color-neutral-50);
+  background-color: var(--color-bg-neutral-soft);
   padding: 0 12px;
   border-radius: 8px;
 
   .p-inputicon {
     transition: color 0.2s ease-in-out;
-    color: var(--color-neutral-500);
+    color: var(--color-icon-soft);
   }
 
   & > .p-inputtext {
@@ -22,7 +22,7 @@
     /* Input placeholder */
     &::placeholder {
       transition: color 0.2s ease-in-out;
-      color: var(--color-neutral-500);
+      color: var(--color-font-soft);
     }
 
     /* Clear */
@@ -41,13 +41,13 @@
   /* Hover */
   &:hover {
     .p-inputicon {
-      color: var(--color-neutral-off-black);
+      color: var(--color-icon-strong);
     }
 
     & > .p-inputtext {
       /* Input placeholder */
       &::placeholder {
-        color: var(--color-neutral-700);
+        color: var(--color-font-secondary);
       }
     }
   }
@@ -55,16 +55,16 @@
   /* Focus */
   &:active,
   &:focus-within {
-    border-color: var(--color-neutral-500);
+    border-color: var(--color-stroke-primary);
 
     .p-inputicon {
-      color: var(--color-neutral-off-black);
+      color: var(--color-icon-strong);
     }
 
     & > .p-inputtext {
       /* Input placeholder */
       &::placeholder {
-        color: var(--color-neutral-700);
+        color: var(--color-font-secondary);
       }
     }
   }
@@ -72,58 +72,52 @@
   /* Filled */
   &:not(:active):not(:focus-within).p-filled {
     .p-inputicon {
-      color: var(--color-neutral-off-black);
+      color: var(--color-icon-strong);
     }
 
     & > .p-inputtext {
       /* Input placeholder */
       &::placeholder {
-        color: var(--color-neutral-700);
+        color: var(--color-font-secondary);
       }
     }
 
-    border-color: var(--color-neutral-300);
+    border-color: var(--color-stroke-secondary);
   }
 
   /* Disabled */
   &.p-disabled {
     pointer-events: none;
-    background-color: var(--color-neutral-50);
-    color: var(--color-neutral-300);
+    background-color: var(--color-bg-neutral-soft);
+    color: var(--color-font-disabled);
 
     .p-inputicon {
-      color: var(--color-neutral-200);
+      color: var(--color-icon-disabled);
     }
 
     & > .p-inputtext {
       /* Input placeholder */
       &::placeholder {
-        color: var(--color-neutral-300);
+        color: var(--color-font-disabled);
       }
     }
   }
 
   /* Invalid */
   &.p-invalid {
-    border-color: var(--color-warning);
+    border-color: var(--color-stroke-error-strong);
 
     .p-inputicon {
-      color: var(--color-neutral-off-black);
+      color: var(--color-icon-strong);
     }
 
     & > .p-inputtext {
-      color: var(--color-neutral-off-black);
+      color: var(--color-font-primary);
       /* Input placeholder */
       &::placeholder {
-        color: var(--color-neutral-off-black);
+        color: var(--color-font-primary);
       }
     }
-  }
-
-  &:not(.p-invalid):focus {
-    box-shadow:
-      0 0 0.4vw var(--color-secondary),
-      0 0 0 0.15vw transparent;
   }
 }
 
@@ -166,11 +160,11 @@
   /* Invalid */
   &.p-invalid {
     color: var(--color-unnamed-4);
-    outline-color: var(--color-warning);
+    outline-color: var(--color-stroke-error-strong);
 
     .p-select-dropdown,
     .p-select-label {
-      color: var(--color-neutral-off-black);
+      color: var(--color-font-primary);
     }
   }
 }
@@ -188,7 +182,7 @@
   border-radius: 8px;
   transform: translateY(2px);
   outline: 1px solid var(--color-unnamed-1);
-  background-color: var(--color-neutral-white);
+  background-color: var(--color-bg-white);
   overflow: hidden;
 
   .p-select-list {
@@ -217,7 +211,7 @@
     color: var(--color-unnamed-5);
   }
   &.p-invalid {
-    color: var(--color-neutral-off-black);
-    outline-color: var(--color-warning);
+    color: var(--color-font-primary);
+    outline-color: var(--color-stroke-error-strong);
   }
 }

@@ -7,6 +7,7 @@
   justify-content: center;
   width: min-content;
   flex-wrap: nowrap;
+  text-wrap: nowrap;
   gap: 8px;
   transition: background-color 0.2s ease-in-out;
 
@@ -21,52 +22,84 @@
   border-radius: 8px;
 
   &.primary {
-    background-color: var(--color-blue-500);
-    color: var(--color-neutral-white);
+    background-color: var(--color-bg-brand-strong);
+    color: var(--color-font-white);
 
+    /* Primary Hover */
     &:not(:active):not(:disabled):not(.loading):hover {
-      background-color: var(--color-blue-400);
+      background-color: var(--color-bg-brand-hover);
     }
 
+    /* Primary Active */
     &:not(:disabled):not(.loading):active {
-      outline: 1px solid var(--color-blue-100);
+      outline: 1px solid var(--color-stroke-brand-soft);
     }
 
+    /* Primary Disabled */
     &:disabled {
       cursor: not-allowed;
-      background-color: var(--color-blue-100);
-      color: var(--color-neutral-white);
+      background-color: var(--color-bg-brand-soft);
+      color: var(--color-font-white);
     }
 
+    /* Primary Loading */
     &.loading {
       cursor: progress;
-      color: var(--color-blue-300) !important;
+      color: var(--color-font-brand-soft) !important;
     }
   }
 
   &.outlined {
     background-color: transparent;
-    color: var(--color-neutral-700);
-    outline: 1px solid var(--color-blue-100);
+    color: var(--color-font-secondary);
+    outline: 1px solid var(--color-stroke-brand-soft);
 
+    /* Outlined Hover */
     &:not(:active):not(:disabled):not(.loading):hover {
-      outline-color: var(--color-blue-500);
+      outline-color: var(--color-stroke-secondary);
     }
 
+    /* Outlined Active */
     &:not(:disabled):not(.loading):active {
-      color: var(--color-neutral-off-black);
-      outline-color: var(--color-blue-500);
+      color: var(--color-font-primary);
+      outline-color: var(--color-stroke-brand-strong);
     }
 
+    /* Outlined Disabled */
     &:disabled {
       cursor: not-allowed;
-      color: var(--color-neutral-300);
-      outline-color: var(--color-blue-100);
+      color: var(--color-font-disabled);
+      outline-color: var(--color-stroke-brand-soft);
     }
 
+    /* Outlined Loading */
     &.loading {
       cursor: progress;
-      color: var(--color-neutral-700) !important;
+      color: var(--color-font-secondary) !important;
+    }
+  }
+
+  &.text {
+    @extend .text-medium;
+    background-color: transparent;
+    color: var(--color-font-brand);
+    gap: 4px;
+    padding: 0;
+
+    /* Text Active */
+    &:not(:disabled):not(.loading):active {
+      color: var(--color-font-brand-hover);
+    }
+
+    /* Text Hover */
+    &:not(:active):not(:disabled):not(.loading):hover {
+      color: var(--color-font-brand-hover);
+    }
+
+    /* Text Disabled */
+    &:disabled {
+      cursor: not-allowed;
+      color: var(--color-font-disabled);
     }
   }
 }

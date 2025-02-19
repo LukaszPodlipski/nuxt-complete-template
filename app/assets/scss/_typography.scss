@@ -1,66 +1,74 @@
 $font-weight-medium: 500;
 $font-weight-regular: 400;
 
+.text-medium {
+  font-weight: $font-weight-medium;
+}
+
+.text-regular {
+  font-weight: $font-weight-regular;
+}
+
 /* Heading */
 
 .text-h1 {
-  font-weight: $font-weight-regular;
+  @extend .text-regular;
   font-size: 24px;
   line-height: 32px;
   letter-spacing: 0px;
 
   &-md {
     @extend .text-h1;
-    font-weight: $font-weight-medium;
+    @extend .text-medium;
   }
 }
 
 .text-h2 {
-  font-weight: $font-weight-regular;
+  @extend .text-regular;
   font-size: 18px;
   line-height: 24px;
   letter-spacing: -1.5px;
 
   &-md {
     @extend .text-h2;
-    font-weight: $font-weight-medium;
+    @extend .text-medium;
   }
 }
 
 /* Body */
 
 .text-body-l {
-  font-weight: $font-weight-regular;
+  @extend .text-regular;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0px;
 
   &-md {
     @extend .text-body-l;
-    font-weight: $font-weight-medium;
+    @extend .text-medium;
   }
 }
 
 .text-body-m {
-  font-weight: $font-weight-regular;
+  @extend .text-regular;
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 0px;
 
   &-md {
     @extend .text-body-m;
-    font-weight: $font-weight-medium;
+    @extend .text-medium;
   }
 }
 
 .text-body-s {
-  font-weight: $font-weight-regular;
+  @extend .text-regular;
   font-size: 12px;
   line-height: 16px;
   letter-spacing: 0px;
 
   &-md {
     @extend .text-body-s;
-    font-weight: $font-weight-medium;
+    @extend .text-medium;
   }
 }
